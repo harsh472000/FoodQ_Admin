@@ -69,6 +69,122 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
+                <div class="buttons">
+                    <div class="btn">
+                        <button class="filterbtn"><ion-icon name="filter-outline"></ion-icon>filter</button>
+                    </div>
+                    <div class="btn">
+                        <button class="filterbtn"><ion-icon name="filter-outline"></ion-icon>Actions</button>
+                    </div>
+                </div>    
+            </div>
+
+            <!--Cards-->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="cardName">Recent Orders</div>
+                        <div class="incard">
+                            <div class="user">
+                                <img src="user1.jpg" alt="">
+                                <div class="contents">
+                                    <div class="uname">Harsh Meghani</div>
+                                    <div class="details">Preorder at 13:37 1 person</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="totalprice">
+                                <div class="total">Total price</div>
+                                <div class="price">100 Rs.</div>
+                            </div>
+                            <div class="totalbutton">
+                                <button class="cancelbtn">Cancel</button>
+                                <button class="acceptbtn">Accept</button>
+                            </div>
+                        </div>
+                        <div class="incard">
+                            <div class="user">
+                                <img src="user1.jpg" alt="">
+                                <div class="contents">
+                                    <div class="uname">Harsh Meghani</div>
+                                    <div class="details">Preorder at 13:37 1 person</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="fitems">
+                                <img src="user1.jpg" alt="">
+                                <div class="finside">
+                                    <div class="foname">Vadapav</div>
+                                    <div class="x1">x1</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="totalprice">
+                                <div class="total">Total price</div>
+                                <div class="price">100 Rs.</div>
+                            </div>
+                            <div class="totalbutton">
+                                <button class="cancelbtn">Cancel</button>
+                                <button class="acceptbtn">Accept</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="iconBx"></div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Daily orders</div>
+                    </div>
+                    <div class="iconBx"></div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Recent Orders</div>
+                    </div>
+                    <div class="iconBx"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -78,6 +194,16 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
+        //menu toggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
         let list=document.querySelectorAll('.navigation li');
         function activelink(){
             list.forEach((item)=>

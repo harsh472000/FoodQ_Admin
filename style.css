@@ -36,6 +36,10 @@ body{
     overflow: hidden;
 }
 
+.navigation.active{
+    width: 80px;
+}
+
 .navigation ul{
     position: absolute;
     top: 0;
@@ -136,6 +140,11 @@ body{
     transition: 0.5s;
 }
 
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
 .topbar{
     width:100%;
     height: 60px;
@@ -150,7 +159,7 @@ body{
     top:0;
     width: 60px;
     height: 60px;
-    background-color: #ccc;
+    /*background-color: #ccc;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,4 +192,161 @@ body{
     top: 0;
     left: 10px;
     font-size: 1.2em;
+}
+
+.buttons{
+    display: flex;
+}
+
+.filterbtn{
+    height:50px;
+    width: 100px;
+    background-color: var(--blue);
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn ion-icon{
+    margin-right: 5px;
+}
+
+/*cards*/
+
+.cardBox{
+    /*position: relative;*/
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    
+}
+
+.cardBox .card{
+    border-radius: 10px;
+    /*position: relative;*/
+    background-color: var(--white);
+    padding: 30px;
+    /*display: flex;*/
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .cardName{
+    font-size: 20px;
+    color: var(--black2);
+}
+
+.incard{
+    /*height: 500px;*/
+    /*width: 300px;*/
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--black2);
+    overflow: auto;
+}
+
+
+.user{
+    display: flex;
+}
+.user img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px 10px 10px 10px;
+
+}
+.details{
+    color: var(--black2);
+}
+.uname{
+    padding-top: 15px;
+}
+.ostatus{
+    color: var(--black1);
+    position: relative;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+.fitems{
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /*overflow: hidden;*/
+    cursor: pointer;
+    margin: 10px 0 5px 10px;
+    justify-content: space-between;
+    align-items: center; 
+}
+.uin{
+    display: flex;
+}
+.fitems img{
+    /*position: absolute;*/
+    /*top: 0;
+    left: 0;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.foname{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+.finside{
+    /*position: fixed;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalprice{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.totalprice .total{
+    padding-left: 7px;
+}
+.totalprice .price{
+    padding-right: 7px;
+}
+
+.cancelbtn{
+    background-color: var(--black2);
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border:0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.acceptbtn{
+    background-color: green;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border:0px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.totalbutton{
+    float:right;
+    margin-bottom: 10px;
 }
