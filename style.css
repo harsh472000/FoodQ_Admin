@@ -9,11 +9,12 @@
 
 :root
 {
-    --blue: #263550;
+    --blue: #2c50ef;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
     --black2: #999;
+    --lightwhite: #f0f4fe;
 }
 
 body{
@@ -28,7 +29,7 @@ body{
 }
 .navigation{
     position: fixed;
-    width: 300px;
+    width: 250px;
     height: 100%;
     background-color: var(--blue);
     border-left: 10px solid var(--blue);
@@ -199,16 +200,17 @@ body{
 }
 
 .filterbtn{
-    height:50px;
+    height:45px;
     width: 100px;
-    background-color: var(--blue);
+    background-color: var(--lightwhite);
     justify-content: center;
     align-items: center;
-    color: var(--white);
+    color: var(--blue);
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     margin-right: 10px;
+    border: 0px;
 }
 
 .btn ion-icon{
@@ -235,20 +237,23 @@ body{
     /*display: flex;*/
     justify-content: space-between;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    max-height: 620px;
+    overflow: auto;
 }
 
 .cardBox .card .cardName{
     font-size: 20px;
-    color: var(--black2);
+    font-weight: bold;
+    color: var(--black1);
 }
 
 .incard{
     /*height: 500px;*/
     /*width: 300px;*/
     background-color: var(--white);
-    border-radius: 10px;
+    border-radius: 6px;
     margin-top: 10px;
-    border: 1px solid var(--black2);
+    border: 0.5px solid var(--black2);
     overflow: auto;
 }
 
@@ -279,7 +284,7 @@ body{
     display: flex;
     position: relative;
     width: 50px;
-    height: 50px;
+    height: 40px;
     border-radius: 50%;
     /*overflow: hidden;*/
     cursor: pointer;
@@ -301,6 +306,7 @@ body{
 .foname{
     margin-left: 10px;
     margin-right: 20px;
+    color: var(--black2);
 }
 
 
@@ -324,7 +330,7 @@ body{
 }
 
 .cancelbtn{
-    background-color: var(--black2);
+    background-color: var(--lightwhite);
     height: 40px;
     width: 80px;
     border-radius: 10px;
@@ -333,10 +339,11 @@ body{
     border:0px;
     font-weight: bold;
     font-size: 15px;
+    color: var(--blue);
 }
 
 .acceptbtn{
-    background-color: green;
+    background-color: var(--blue);
     height: 40px;
     width: 80px;
     border-radius: 10px;
@@ -345,8 +352,31 @@ body{
     border:0px;
     font-weight: bold;
     font-size: 15px;
+    color: white;
 }
 .totalbutton{
     float:right;
     margin-bottom: 10px;
 }
+.x1{
+    color: var(--black2);
+}
+
+/*scroll bar*/
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grey;*/ 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--black2); 
+    border-radius: 10px;
+  }
+  
