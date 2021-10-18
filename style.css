@@ -27,6 +27,9 @@ body{
     position: relative;
     width: 100%;
 }
+
+/*logo*/
+    
 .navigation{
     position: fixed;
     width: 250px;
@@ -222,7 +225,9 @@ body{
 .cardBox{
     /*position: relative;*/
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
@@ -253,7 +258,7 @@ body{
     background-color: var(--white);
     border-radius: 6px;
     margin-top: 10px;
-    border: 0.5px solid var(--black2);
+    border: 2px solid #f3f3f3;
     overflow: auto;
 }
 
@@ -308,13 +313,15 @@ body{
     margin-right: 20px;
     color: var(--black2);
 }
-
-
 .finside{
     /*position: fixed;*/
     display: flex;
     justify-content: space-between;
 }
+/*.x1{
+    position: relative;
+    right: 0px;
+}*/
 
 .totalprice{
     margin-top: 10px;
@@ -322,10 +329,16 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.totalprice .total{
+.ctotalprice{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.total{
     padding-left: 7px;
 }
-.totalprice .price{
+.price{
     padding-right: 7px;
 }
 
@@ -354,6 +367,20 @@ body{
     font-size: 15px;
     color: white;
 }
+
+.markasdone{
+    background-color: #29bd6b;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border:0px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
 .totalbutton{
     float:right;
     margin-bottom: 10px;
@@ -380,3 +407,44 @@ body{
     border-radius: 10px;
   }
   
+
+  /*responsive*/
+
+  @media(max-width:1024px){
+      .navigation{
+          left: -300px;
+      }
+      .navigation.active{
+          width: 300px;
+          left: 0;
+      }
+      .main{
+          width: 100%;
+          left: 0;
+      }
+      .main.active{
+          left: 300px;
+      }
+      .cardBox{
+          grid-template-columns: repeat(2,1fr);
+      }
+  }
+@media(max-width:760px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
