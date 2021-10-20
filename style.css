@@ -9,7 +9,8 @@
 
 :root
 {
-    --blue: #2c50ef;
+    /*--blue: #2c50ef;*/
+    --blue:#263550;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
@@ -29,7 +30,14 @@ body{
 }
 
 /*logo*/
-    
+.logo{
+    height: 115px;
+}
+.logo img{
+    height: 106px;
+    width: 240px;
+
+}
 .navigation{
     position: fixed;
     width: 250px;
@@ -45,7 +53,7 @@ body{
 }
 
 .navigation ul{
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     left: 0;
     width: 100%;
@@ -91,9 +99,9 @@ body{
     font-size: 1.75em;
 }
 
-.navigation ul li:nth-child(1){
+/*.navigation ul li:nth-child(1){
     margin-bottom: 40px;
-}
+}*/
 
 .navigation ul li a .title{
     position: relative;
@@ -132,6 +140,42 @@ body{
     box-shadow: 35px -35px 0 10px var(--white);
     pointer-events: none;
 }
+
+/*shop on off toggle button*/
+.stoggle{
+    position: absolute;
+    /* top: 50%; */
+    margin-top: 114px;
+    left: 40%;
+    transform: translate(-50%,-50%)
+  }
+  
+  .stoggle-btn{
+    width: 68px;
+    height: 36px;
+    background: gray;
+    border-radius: 30px;
+    padding: 5px;
+    transition: all 300ms ease-in-out 0s;
+    cursor: pointer;
+  }
+  
+  .stoggle-btn > .inner-circle{
+    width: 20px;
+    height: 24px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: all 300ms ease-in-out 0s;
+    cursor: pointer;
+  }
+  
+  .stoggle-btn.active{
+    background:#00acee;
+  }
+  
+  .stoggle-btn.active > .inner-circle{
+  margin-left:40px;
+  }
 
 
 /*maiin*/
@@ -262,6 +306,11 @@ body{
     overflow: auto;
 }
 
+hr{
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
 
 .user{
     display: flex;
@@ -288,13 +337,13 @@ body{
 .fitems{
     display: flex;
     position: relative;
-    width: 50px;
-    height: 40px;
+    width: 100%;
+    height: 50px;
     border-radius: 50%;
     /*overflow: hidden;*/
     cursor: pointer;
-    margin: 10px 0 5px 10px;
-    justify-content: space-between;
+    padding: 10px 0 5px 10px;
+    /*justify-content: space-between;*/
     align-items: center; 
 }
 .uin{
@@ -304,7 +353,7 @@ body{
     /*position: absolute;*/
     /*top: 0;
     left: 0;*/
-    width: 100%;
+    width: 15%;
     height: 100%;
     border-radius: 10px;
 }
@@ -317,6 +366,11 @@ body{
     /*position: fixed;*/
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    float: left;
+    margin-left: 3%;
+    height: 100%;
 }
 /*.x1{
     position: relative;
