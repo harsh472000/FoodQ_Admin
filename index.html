@@ -86,13 +86,39 @@
                     </label>
                 </div>
                 <div class="buttons">
+                    <div class="shopinfo">
+                        <img src="user1.jpg" height="50px" width="50px" alt="">
+                        <h3>Baba da dhaba</h3>
+                    </div>
                     <div class="btn">
+                        <button class="notibtn"><ion-icon name="notifications-outline"></ion-icon></button>
+                    </div>
+                    <div class="btn">
+                        <button class="notibtn"><ion-icon name="chatbubbles-outline"></ion-icon></button>
+                    </div>
+                    <div class="btn" onclick="userMenuToggle();">
+                        <button class="notibtn"><ion-icon name="caret-down-outline"></ion-icon></button>
+                    </div>
+                    
+                    <!--<div class="btn">
                         <button class="filterbtn"><ion-icon name="filter-outline"></ion-icon>filter</button>
                     </div>
                     <div class="btn">
                         <button class="filterbtn"><ion-icon name="filter-outline"></ion-icon>Actions</button>
-                    </div>
-                </div>    
+                    </div>-->
+                    
+                </div>   
+            </div>
+            <div class="dmenu">
+                <h3>baba da dhaba</h3>
+                <ul>
+                    <li><ion-icon name="person-outline"></ion-icon><a href="#">My Profile</a></li>
+                    <li><ion-icon name="create-outline"></ion-icon><a href="#">Edit Profile</a></li>
+                    <li><ion-icon name="mail-outline"></ion-icon><a href="#">Inbox</a></li>
+                    <li><ion-icon name="settings-outline"></ion-icon><a href="#">Setting</a></li>
+                    <li><ion-icon name="information-circle-outline"></ion-icon><a href="#">Help</a></li>
+                    <li><ion-icon name="log-out-outline"></ion-icon><a href="#">Logout</a></li>
+                </ul>
             </div>
 
             <!--Cards-->
@@ -380,6 +406,12 @@
         }
         list.forEach((item)=>
         item.addEventListener('mouseover',activelink));
+
+        /*user dropdown*/
+        function userMenuToggle(){
+            const userToggleMenu=document.querySelector('.dmenu');
+            userToggleMenu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
