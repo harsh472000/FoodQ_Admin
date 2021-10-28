@@ -314,7 +314,7 @@ body{
 
 .filterbtn{
     height:45px;
-    width: 100px;
+    width: 130px;
     background-color: var(--lightwhite);
     justify-content: center;
     align-items: center;
@@ -894,27 +894,316 @@ td img{
     align-items: center;
 }
 
-  /*responsive*/
 
-  @media(max-width:1024px){
-      .navigation{
-          left: -300px;
-      }
-      .navigation.active{
-          width: 300px;
-          left: 0;
-      }
-      .main{
-          width: 100%;
-          left: 0;
-      }
-      .main.active{
-          left: 300px;
-      }
-      .cardBox{
-          grid-template-columns: repeat(2,1fr);
-      }
+
+
+/* add items buttons */
+.additems{
+    display: flex;
+    justify-content: flex-end;
+}
+.additems button ion-icon{
+    font-size: 19px;
+}
+.btext{
+    align-items: center;
+}
+.additems button{
+    width: 130px;
+    background-color: var(--lightwhite);
+    border: 0px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    /*float: right;*/
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.additems button:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* add item card*/
+
+.addmaincon{
+    margin-top: 15px;
+    display: flex;
+}
+
+.addmaincon{
+    position: relative;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+
+.addmaincon .additemcontainer{
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.additemcontainer .addicard .addiimg{
+    display: flex;
+    justify-content: center;
+}
+.additemcontainer .addicard img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.additemcontainer .addicard h3{
+    text-align: center;
+}
+.additemcontainer .addicard .addiicon{
+    font-size: 30px;
+    text-align: end;
+}
+
+.additemcontainer .addicard .addiicon ion-icon{
+    cursor: pointer;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+/*rating stars*/
+.rate {
+    float: left;
+    height: 46px;
+    /*padding: 0 10px;*/
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* rating stars end*/
+
+
+.otherproper .samename{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+.otherproper .samename .samenamekey, .otherproper .samename .samenamevalue{
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.otherproper .additoggle{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.otherproper .additoggle .iavailable{
+    font-size: 20px;
+}
+
+/* toggle button of item available or not*/
+.switch {
+    position: relative;
+    /*display: inline-block;*/
+    width: 60px;
+    height: 34px;
+    margin-left: 15px;
+    margin-right: 15px;
+    
   }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* end of the toggle*/  
+
+/* add item popup toggle*/
+
+.popupmodel{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding:20px 30px;
+    background: var(--blue);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+}
+
+.popupmodel.active{
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popupmodel .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popupmodel .form h2{
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.popupmodel .form .form-element{
+    margin: 15px 0px;
+}
+
+.popupmodel .form .form-element label{
+    font-size: 14px;
+    color: var(--white);
+}
+
+.popupmodel .form .form-element input[type="text"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.popupmodel .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: var(--black2);
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*add item popup toggle end*/
+
+
+
+/*responsive*/
+
+@media(max-width:1024px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 @media(max-width:760px){
     .navigation{
         left: -300px;
