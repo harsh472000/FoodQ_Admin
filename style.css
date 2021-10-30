@@ -1207,10 +1207,20 @@ td img{
 }
 
 
-
-
-
 /*add item popup toggle end*/
+
+/* coupen code page start*/
+
+.coupencontainer{
+    margin: 20px;
+}
+
+
+
+
+
+
+/* coupen code page end*/
 
 
 
@@ -1233,6 +1243,11 @@ td img{
     }
     .cardBox{
         grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:900px){
+    .addmaincon{
+        grid-template-columns: 1fr 1fr;
     }
 }
 @media(max-width:760px){
@@ -1273,5 +1288,14 @@ td img{
     .piechart{
         width: 140px;
         height: 140px;
+    }
+}
+
+@media(max-width:640px){
+    .addmaincon{
+        grid-template-columns: 1fr;
+    }
+    .popupmodel{
+        width: 320px;
     }
 }
