@@ -1127,7 +1127,7 @@ td img{
     transform: translate(-50%,-50%) scale(1);
 }
 
-.popupmodel .close-btn{
+.popupmodel .close-btn,.cpopupmodel .close-btn{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1140,23 +1140,23 @@ td img{
     cursor: pointer;
 }
 
-.popupmodel .form h2{
+.popupmodel .form h2,.cpopupmodel .form h2{
     text-align: center;
     margin: 10px 0px 20px;
     font-size: 25px;
     color: var(--white);
 }
 
-.popupmodel .form .form-element{
+.popupmodel .form .form-element,.cpopupmodel .form .form-element{
     margin: 15px 0px;
 }
 
-.popupmodel .form .form-element label{
+.popupmodel .form .form-element label,.cpopupmodel .form .form-element label{
     font-size: 14px;
     color: var(--white);
 }
 
-.popupmodel .form .form-element input[type="text"]{
+.popupmodel .form .form-element input[type="text"],.cpopupmodel .form .form-element input[type="text"]{
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -1165,8 +1165,13 @@ td img{
     border-radius: 5px;
     border: 1px solid #aaa;
 }
-
-.popupmodel .form .form-element input[type="file"]{
+#Enddate{
+    margin-left: 7px;
+}
+.enddategap{
+    margin-top: 7px;
+}
+.popupmodel .form .form-element input[type="file"],.cpopupmodel .form .form-element input[type="file"]{
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -1186,7 +1191,7 @@ td img{
     border-radius: 5px;
     cursor: pointer;
 }
-.popupmodel .form .form-element select{
+.popupmodel .form .form-element select,.cpopupmodel .form .form-element select{
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -1194,7 +1199,7 @@ td img{
     border-radius: 5px;
     border: 1px solid #aaa;
 }
-.popupmodel .form .form-element button{
+.popupmodel .form .form-element button,.cpopupmodel .form .form-element button{
     width: 100%;
     height: 40px;
     border: none;
@@ -1216,10 +1221,55 @@ td img{
 }
 
 
+.cpopupmodel{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 380px;
+    padding:20px 30px;
+    background: var(--blue);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+}
 
+.cpopupmodel.active{
+    top:50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
 
+.cwrapper nav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
-
+.cwrapper nav label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 14px;
+    z-index: 1;
+    position: relative;
+}
+.cwrapper nav .cslider{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: var(--black2);
+    border-radius: 5px;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+}
 /* coupen code page end*/
 
 

@@ -7,3 +7,5 @@ document.querySelector(".popupmodel .close-btn")
 .addEventListener("click",function(){
     document.querySelector(".popupmodel").classList.remove("active");
 });
+
+
